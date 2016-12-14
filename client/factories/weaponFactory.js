@@ -12,5 +12,5 @@ app.factory('weaponFactory', function($http){
 				});
       }
     }
-    return new UserFactory();
+    return new WeaponFactory();
 });
