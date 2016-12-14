@@ -1,4 +1,4 @@
-const app = angular.module('testApp', ['ngRoute']);
+const app = angular.module('strangerApp', ['ngRoute']);
 
 app.config(function($routeProvider){
     $routeProvider
@@ -7,10 +7,10 @@ app.config(function($routeProvider){
             controller: 'indexController',
             controllerAs: 'iC'
         })
-        .when('/next', {
-            templateUrl: 'partials/next.html',
-            controller: 'nextController',
-            controllerAs: 'nC'
+        .when('/weapon', {
+            templateUrl: 'partials/weapon.html',
+            controller: 'weaponController',
+            controllerAs: 'wC'
         })
         .otherwise({
             redirectTo: '/'

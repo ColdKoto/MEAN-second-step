@@ -1,6 +1,13 @@
-app.controller('indexController', function($scope, $location){
+app.controller('indexController', function($scope, weaponFactory, $location){
 
-  this.moveOn = function(){
-    $location.url('/next');
+  let self = this;
+
+  this.buy = function(){
+      weaponFactory.buy(self.newWeapon)
+          .then(function(data){
+              if(data.weapon){
+                  $location.url('/weapon');
+              }
+          });
   }
 });
