@@ -6,7 +6,6 @@ app.controller('indexController', function($scope, weaponFactory, $location){
   this.buy = function(){
       weaponFactory.buy(self.newWeapon)
           .then(function(data){
-            console.log(data);
               if(data.name){
                   $location.url('/weapon');
               }
