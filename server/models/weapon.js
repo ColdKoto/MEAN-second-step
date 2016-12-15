@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 let WeaponSchema = new mongoose.Schema({
-  weapon: {
+  name: {
       type: String,
       required: [true, 'Weapon is required'],
       trim: true
