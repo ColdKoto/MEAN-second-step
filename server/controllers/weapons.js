@@ -8,7 +8,8 @@ class WeaponsController{
         const newWeapon = new Weapon({
             name: req.body.name,
         });
-        res.json(newWeapon);
+				newWeapon.save(function(weapon){});
+				res.json(newWeapon);
   }
 }
 

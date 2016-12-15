@@ -8,4 +8,8 @@ let WeaponSchema = new mongoose.Schema({
   },
 }, {timestamps: true});
 
+WeaponSchema.pre('save', function(next){
+	  next();
+});
+
 mongoose.model('Weapon', WeaponSchema);
